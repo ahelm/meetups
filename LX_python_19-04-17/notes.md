@@ -50,7 +50,7 @@ Pro's for using Python 3:
   a, *rest, b = range(100)    # a = 0, b = 99, rest = [..]
   ```
 
-- Chained exceptions (in Python 2 you lost the traceback on the go)
+- Chained exceptions (in Python 2 you lost the traceback on the go):
 
   ```python
   def mycopy(source, dest):
@@ -61,7 +61,7 @@ Pro's for using Python 3:
   ```
 
 - More exceptions especially for `OSError`
-- Everything is an iterator
+- Almost everything is an iterator
   - speeds up some code parts and reduced memory footprint
   - use `list()` to get a list out of an iterator
 - No more comparision of everything to everything
@@ -83,6 +83,7 @@ Pro's for using Python 3:
 
 - Since Python 3.6, Python runs faster and is more economical with memory
 - f-Strings: `print(f"some variable = {variable}")`
+- asyncio: writing concurrent code
 
 Pro's for using Python 2:
 
@@ -97,12 +98,34 @@ Pro's for using Python 2:
 - **Poetry:** helps to declare, manage and install dependencies of Python
   projects, ensuring you have the right stack everywhere
 
-### Python package management++
+### How about working with different python versions?
 
-- **conda:** Package, dependency and environment management for any
+- **Conda:** package, dependency and environment management for any
   language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, FORTRAN
+- **Docker:** containerization for managing "dependency hell"
 
 ## Solving python version issues with Conda
+
+- CLI tool which is used as a package management system and environment
+  management system
+- Cross-platform
+- Pip on steroids (simplified)
+- To install `conda`, either install
+  [Anaconda](https://www.anaconda.com/distribution/) or
+  [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+
+### Creating custom environment
+
+- Like a `virtualenvwrapper` a separate "hidden" environment not to interact
+  with your system python
+- Resolves automatically dependencies and installs recipes and pre-build
+  packages
+
+  ```shell
+  conda create -n new_conda_environment python=2.6 django=1.6
+  ```
+
+### Activating the environment
 
 - explain the context of enviroment
 - how to create a new enviroment
