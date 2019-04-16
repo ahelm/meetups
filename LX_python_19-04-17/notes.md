@@ -121,16 +121,45 @@ Pro's for using Python 2:
 - Resolves automatically dependencies and installs recipes and pre-build
   packages
 
-  ```shell
+  ```sh
   conda create -n new_conda_environment python=2.6 django=1.6
   ```
 
-### Activating the environment
+### Activating custom conda environment
 
-- explain the context of enviroment
-- how to create a new enviroment
-- how to specify a python version and specific version of a package
-- how to activate the enviroment
+- Listening all available `conda` environments
+
+  ```sh
+  conda info --envs
+  # Shell output:
+  #
+  # #conda environments:
+  # #
+  # base                   *  /Users/anton/miniconda3
+  # new_conda_environment     /Users/anton/miniconda3/envs/new_conda_environment
+  ```
+
+- Activating an environment is easy as
+
+  ```sh
+  conda activate new_conda_environment
+  # will add `(<enviroment_name>)` in front of the prompt in the shell
+  ```
+
+- Each environment `pip` comes with an own `pip`
+
+  ```sh
+  which pip
+  # path of pip: /Users/anton/miniconda3/envs/new_conda_environment/bin/pip
+  pip list
+  # Django (1.6.6)
+  # pip (7.1.0)
+  # setuptools (18.0.1)
+  ```
+
+- Better to install new packages through `conda install` if available rather
+  than `pip`
+
 
 ## ☛ __Is Python a compiled or interpreted programming language?__
 
