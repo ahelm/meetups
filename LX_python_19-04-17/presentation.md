@@ -1,7 +1,7 @@
-<!--
-TODO: move this file to the corresponding meetup folder
--->
-# Python meetup presentation
+# 3 Things About Python You Have to know
+## Anton Helm
+
+---
 
 ## About me
 
