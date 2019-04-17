@@ -11,7 +11,6 @@ TODO: move this file to the corresponding meetup folder
 - working on numerical simulations of plasmas
 - numerical simulations are based on Fortran and run on up to 2M CPUs and
 also GPUs
-- Hobbies: Things, ...
 
 ---
 
@@ -19,13 +18,10 @@ also GPUs
 
 - The things discussed in this meetup are not presenting anything related with
 my research, my PhD or my day-to-day working schedule.
-
 - This presentation is build up based on three major questions which
 "hopefully" are up to now unanswered for your.
-
 - Each section will try to cover a little bit of content connected with this
 question and will give some insight to educate and enlighten the audience.
-
 - After the presentation you should basically have a deeper understanding
 about Python as a programming language and hopefully it will provide you with
 some insights for future steps you are trying to achieve with Python.
@@ -74,7 +70,7 @@ some insights for future steps you are trying to achieve with Python.
 
 - More exceptions especially for `OSError`
 - Almost everything is an iterator
-  - speeds up some code parts and reduced memory footprint
+  - speeds up code parts and reduces memory footprint
   - use `list()` to get a list out of an iterator
 - No more comparision of everything to everything
 
@@ -165,10 +161,10 @@ new_conda_environment     /Users/anton/miniconda3/envs/new_conda_environment
 
 # Activating an environment is easy as
 
-  ```sh
-  conda activate new_conda_environment
-  # will add `(<enviroment_name>)` in front of the prompt in the shell
-  ```
+```sh
+conda activate new_conda_environment
+# will add `(<enviroment_name>)` in front of the prompt in the shell
+```
 
 Each environment `pip` comes with an own `pip`
 
@@ -224,7 +220,7 @@ setuptools (18.0.1)
 
 ---
 
-# Both
+# It's both
 
 ---
 
@@ -252,7 +248,7 @@ setuptools (18.0.1)
 
 ---
 
-# Python beats C in performance
+# Python can beat C in performance
 
 ![Python vs C](section_3/py-c_performance.png)
 
