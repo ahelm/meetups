@@ -13,6 +13,8 @@ TODO: move this file to the corresponding meetup folder
 also GPUs
 - Hobbies: Things, ...
 
+---
+
 ## Disclaimer
 
 - The things discussed in this meetup are not presenting anything related with
@@ -28,20 +30,30 @@ question and will give some insight to educate and enlighten the audience.
 about Python as a programming language and hopefully it will provide you with
 some insights for future steps you are trying to achieve with Python.
 
-## ☛ __Should you use Python 2 or Python 3?__
+---
+
+# Should you use Python 2 or Python 3?
+
+<!--
 
 - **RAISE A HAND WHO IS WORKING WITH PYTHON 2.x**
 - **RAISE A HAND WHO IS WORKING WITH PYTHON 3.x**
 
-> You should work with Python 3.x
+-->
 
-## Python 2.7 will not be maintained past 2020
+---
 
-- show link or screenshot of [Python 2.7 clock](https://pythonclock.org/)
+# Use Python 3
 
-## Pro's and con's to use Python 3.x vs. Python 2.x
+---
 
-Pro's for using Python 3:
+# Python 2.7 will not be maintained past 2020
+
+![Python 2.7 countdown](section_1/python2-7_countdown.png)
+
+---
+
+# Pro's for using Python 3
 
 - Advanced unpacking:
 
@@ -76,35 +88,39 @@ Pro's for using Python 3:
 - Matrix multiplication with `@` operator
 - `pathlib` in standard library for dealing with paths
 
-> courtesy to [
-> Aaron Meurer's presentation "10 awesome features of Python that you can't use
-> because you refuse to upgrade to Python 3"](
-> https://www.asmeurer.com/python3-presentation/slides.html)
+> courtesy to [Aaron Meurer's presentation "10 awesome features of Python that you can't use because you refuse to upgrade to Python 3"](https://www.asmeurer.com/python3-presentation/slides.html)
 
 - Since Python 3.6, Python runs faster and is more economical with memory
 - f-Strings: `print(f"some variable = {variable}")`
 - asyncio: writing concurrent code
+- type annotations
 
-Pro's for using Python 2:
+---
+
+# Why use Python 2
 
 - some library are **STILL** not compatible with Python 3
 
-## Python packaging and tools
+---
 
-### Python package management
+# Python packaging and tools
+
+## Python package management
 
 - **Pip:** pip is the package installer for Python
 - **Pipenv:** is a tool that aims to bring the best of all packaging worlds
 - **Poetry:** helps to declare, manage and install dependencies of Python
   projects, ensuring you have the right stack everywhere
 
-### How about working with different python versions?
+## How about working with different python versions
 
 - **Conda:** package, dependency and environment management for any
   language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, FORTRAN
 - **Docker:** containerization for managing "dependency hell"
 
-## Solving python version issues with Conda
+---
+
+# Solving python version issues with Conda
 
 - CLI tool which is used as a package management system and environment
   management system
@@ -114,7 +130,9 @@ Pro's for using Python 2:
   [Anaconda](https://www.anaconda.com/distribution/) or
   [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 
-### Creating custom environment
+---
+
+# Creating custom environment
 
 - Like a `virtualenvwrapper` a separate "hidden" environment not to interact
   with your system python
@@ -125,46 +143,194 @@ Pro's for using Python 2:
   conda create -n new_conda_environment python=2.6 django=1.6
   ```
 
-### Activating custom conda environment
+---
 
-- Listening all available `conda` environments
+# Activating custom conda environment
 
-  ```sh
-  conda info --envs
-  # Shell output:
-  #
-  # #conda environments:
-  # #
-  # base                   *  /Users/anton/miniconda3
-  # new_conda_environment     /Users/anton/miniconda3/envs/new_conda_environment
-  ```
+Listening all available `conda` environments:
 
-- Activating an environment is easy as
+```sh
+conda info --envs
+```
+
+Output:
+
+```log
+#conda environments:
+base                   *  /Users/anton/miniconda3
+new_conda_environment     /Users/anton/miniconda3/envs/new_conda_environment
+```
+
+---
+
+# Activating an environment is easy as
 
   ```sh
   conda activate new_conda_environment
   # will add `(<enviroment_name>)` in front of the prompt in the shell
   ```
 
-- Each environment `pip` comes with an own `pip`
+Each environment `pip` comes with an own `pip`
 
-  ```sh
-  which pip
-  # path of pip: /Users/anton/miniconda3/envs/new_conda_environment/bin/pip
-  pip list
-  # Django (1.6.6)
-  # pip (7.1.0)
-  # setuptools (18.0.1)
-  ```
+```sh
+which pip
+```
 
-- Better to install new packages through `conda install` if available rather
-  than `pip`
+```log
+/Users/anton/miniconda3/envs/new_conda_environment/bin/pip
+```
 
+Including the specified packages and version
 
-## ☛ __Is Python a compiled or interpreted programming language?__
+```sh
+pip list
+```
 
+```log
+Django (1.6.6)
+pip (7.1.0)
+setuptools (18.0.1)
+```
+
+---
+
+# Better to install new packages through `conda install` if available rather than `pip`
+
+---
+
+# Is Python a compiled or interpreted programming language?
+
+---
+
+# Compiled language
+
+![Compiled language](sketches/compiled_language.png)
+
+---
+
+# Interpreted language
+
+![Interpreted language](sketches/interpreted_language.png)
+
+---
+
+# Is Python an interpreted or compiled programming language?
+
+<!--
 - **RAISE A HAND IF YOU THINK IT'S COMPILED**
 - **RAISE A HAND IF YOU THINK IT'S INTERPRETED**
 - **RAISE A HAND IF YOU THINK IT'S BOTH**
+-->
 
-## ☛ __Is Python slow?__
+---
+
+# Both
+
+---
+
+# Python compiles source file to bytecode and executes it
+
+![Python compilation and excecution](sketches/python_language.png)
+
+---
+
+# Demo time
+
+---
+
+# Is Python slow?
+
+---
+
+# It depends!
+
+---
+
+# Let's find unique values in array
+
+- create graphic of two arrays
+
+---
+
+# Python beats C in performance
+
+![Python vs C](section_3/py-c_performance.png)
+
+---
+
+# Looking at the byte code
+
+---
+
+# Python is slow because of it's dynamic nature
+
+Check out the Medium post [Why is Python so slow?](https://hackernoon.com/why-is-python-so-slow-e5074b6fe55b) by Anthony Shaw
+
+---
+
+# How can it beat still C?
+
+```c
+int main()
+{
+  // ...
+  init_array(arr1, arr2, array_len, &count);
+
+  shuffle_array(arr1, array_len);
+  shuffle_array(arr2, array_len);
+
+  tic = clock();
+  check = count_common_entries(arr1, arr2, array_len);
+  toc = clock();
+  // ...
+}
+
+int count_common_entries(*arr1, *arr2, N)
+{
+  // ..
+  int count = 0;
+  for (int i = 0; i < N; i++){
+    for (int j = 0; j < N; j++){
+      if (arr1[i] == arr2[j]){
+        count += 1;
+        break;
+      }
+    }
+  }
+  // ..
+}
+```
+
+```python
+def find_tags(arr_length):
+    arr1, arr2, count = init_arrays(arr_length)
+
+    shuffle(arr1)
+    shuffle(arr2)
+
+    tic = time()
+    check = count_common_entries(arr1, arr2)
+    toc = time()
+```
+
+```python
+def count_common_entries(arr1, arr2):
+    # generate set from arr1
+    tags = set(arr1)
+
+    # check common entries
+    common = 0
+    for val in arr2:
+        if val in tags:
+            common += 1
+
+    return common
+```
+
+---
+
+# Good resources
+
+- [Talk Python To Me](https://talkpython.fm/) by Michael Kennedy **(@mkennedy)**
+- [Python Bytes](https://pythonbytes.fm/) by Michael Kennedy **(@mkennedy)** and
+  Brian Okken **(@brianokken)**
