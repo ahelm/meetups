@@ -232,6 +232,10 @@ setuptools (18.0.1)
 
 # Demo time
 
+Jupyter Lab extension for bytecode by **Jeremy Tuloup**
+![](sketches/github-brands.svg) **jtpio**
+![](sketches/twitter-brands.svg) **@jtpio**
+
 ---
 
 # Is Python slow?
@@ -330,3 +334,8 @@ def count_common_entries(arr1, arr2):
 - [Talk Python To Me](https://talkpython.fm/) by Michael Kennedy **(@mkennedy)**
 - [Python Bytes](https://pythonbytes.fm/) by Michael Kennedy **(@mkennedy)** and
   Brian Okken **(@brianokken)**
+- [Real Python](https://realpython.com/) has awesome tutorials for different levels of expertise
+
+---
+
+# Thank you
