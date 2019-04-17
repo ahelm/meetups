@@ -248,7 +248,7 @@ Jupyter Lab extension for bytecode by **Jeremy Tuloup**
 
 # Let's find unique values in array
 
-- create graphic of two arrays
+![](sketches/array_sketch.png)
 
 ---
 
