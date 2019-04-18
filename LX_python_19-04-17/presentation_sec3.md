@@ -91,3 +91,14 @@ def count_common_entries(arr1, arr2):
 
     return common
 ```
+
+---
+
+# Compile directly Python to C
+
+## Speeds up parts of the code by compilation
+
+- [Mypyc](https://github.com/mypyc/mypyc): a compiler that compiles
+  mypy-annotated, statically typed Python modules into Python C extensions
+- [Nuitka](http://nuitka.net/pages/overview.html#): Python compiler written in
+  Python
